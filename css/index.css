@@ -1,0 +1,53 @@
+body{
+	background: url(../images/bgg.jpg) repeat fixed  center;
+	margin:0;
+	padding:0;
+	
+	
+}
+.userRegisterText{
+	display: inline-block; /*设置容器为内联块对象*/
+	width: 20%; /*设置容器宽度*/
+	text-align: right;  
+	padding-right: 5px;
+	font: bold 15px "Microsoft YaHei";
+	vertical-align: top;  /*设置容器垂直对齐方式为顶端对齐*/
+}
+/*设置用户注册项右边输入框容器的样式*/
+.userRegisterInput{
+	display: inline-block;
+	width: 70%;
+}
+/*设置用户注册项右边输入提示文字容器的样式*/
+.userRegisterNotice{
+	font: 15px "Microsoft YaHei";
+	color: #444444;
+	padding: 8px 0px;
+}
+
+/*span{
+	color:red;
+}
+#div1{
+	float:right;
+	margin-top:80px;
+	margin-right:100px;
+	width:550px;
+	text-align:center;
+	
+}
+#h{
+	margin:0 auto;
+	width:300px;
+	border:dotted 2px black;
+
+	padding:4px;
+	
+}
+form{
+	
+	background:white;
+	opacity:0.8;
+	width:500px;
+}
+*/

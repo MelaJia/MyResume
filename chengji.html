@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/chengji.css" />
+<script type="text/javascript" src="js/chengji.js"></script>
+<title>成绩页</title>
+</head>
+
+<body>
+<center>
+<div class="div1">
+<table border="1" cellpadding="5" cellspacing="0" id="order">
+     
+		<tr class="title">
+        <td>全选<input type="checkbox"  onclick="a_check()" id="all"/></td>
+			<td>学期</td>
+			<td>专业</td>
+			<td>成绩</td>
+       
+			<td>操作</td>
+		</tr>
+		<tr id="del">
+        <td><input type="checkbox"  name="ic"/></td>
+			<td>(大一)学期一</td>
+			<td>Android</td>
+			<td>95分</td>
+			<td><input type="button" name="rowdel" value="删除" /></td>
+		</tr>
+		<tr id="del">
+        <td><input type="checkbox" name="ic" /></td>
+			<td>(大一)学期一</td>
+			<td>Android</td>
+			<td>95分</td>
+			<td><input type="button" name="rowdel" value="删除" /></td>
+		</tr>
+        <tr id="del">
+        
+        <td><input type="checkbox" name="ic" /></td>
+			<td>(大一)学期一</td>
+			<td>Android</td>
+			<td>95分</td>
+			<td><input type="button" name="rowdel" value="删除"/></td>
+		</tr>
+        <tr id="del">
+        <td><input type="checkbox" name="ic" /></td>
+			<td>(大一)学期一</td>
+			<td>Android</td>
+			<td>95分</td>
+			<td><input type="button" name="rowdel" value="删除" onclick='s_check()'/></td>
+		</tr>
+        <tr id="del">
+        <td><input type="checkbox" name="ic"/></td>
+			<td>(大一)学期一</td>
+			<td>Android</td>
+			<td>95分</td>
+			<td><input type="button" name="rowdel" value="删除" onclick='s_check()'/></td>
+		</tr>
+        <tr>
+		<!-- 	colspan表示表格单元横跨4列的表格： -->
+			<td colspan="5" style="height: 30px; ">
+            <input type="button" name="ic" value="添加成绩"onclick="add()"/>
+				<input type="button" name="ic" value="删除选中的"onclick="s_check()"/>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="div2"><a href="main.html"><img src="images/last.jpg" />
+</div>
+</body>
+</html>

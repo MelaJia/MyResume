@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="css/index.css" />
+<script type="text/javascript" src="js/index.js"></script>
+<title>登录注册页</title>
+</head>
+
+<body>
+<div id="div1">
+	<h1 id="h">我的大学生活</h1>
+	<center>
+     <form action="main.html" onsubmit="return check()"> 
+       <h1>注 册</h1> 
+         <p> 
+         <label for="username" class="uname"> 姓名</label>
+         <input id="username2" name="name" type="text" placeholder="请输入您的姓名" onblur="checkname()"/>
+       
+         </p><span id="span1"></span>
+         <p> 
+         <label for="password2" class="youpasswd" > 密码 </label>
+         <input id="password2" name="pass" type="password" placeholder="请输入密码" onblur="checkpas()" /> 
+         
+         </p><span id="span2"></span>
+         <p> 
+         <label for="pass2" class="youpasswd" > 确认密码 </label>
+         <input id="pass2" name="pass" type="password" placeholder="请输入学号" onblur="checkpas2()"/> 
+        
+         </p> <span id="span3"></span>
+         <p> 
+         <label for="email" class="youpasswd" > 邮箱 </label>
+         <input id="email" name="email" type="email" placeholder="请输入邮箱"  onblur="checkemail()"/> 
+         
+         </p><span id="span4"></span>
+                                
+         <p class="keeplogin"> 
+		<input type="checkbox" name="loginkeeping" id="cc" value="loginkeeping" onblur="checkbok()"/> 
+		<label for="loginkeeping">同意<a href="">协议</a></label>
+		</p><span id="span5"></span>
+        <p class="login button"> 
+       <input type="submit" value="注 册" /> 
+   
+								</p>
+                                
+       </form>
+ </center>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* CSS Document */
+body{
+	background: url(../images/bg.jpg) repeat fixed  center;
+	margin:0;
+	padding:0;
+	
+	
+}
+.div1{
+	margin-top:80px;
+}
+table{
+	width:500px;
+}
+.title{
+	font-weight:bold;
+	text-align:center;
+	background-color:grey;
+}
+#div2{
+	float:left;
+}
+img{
+		width:100px;
+		height:55px;}
+	
+

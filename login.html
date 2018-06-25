@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录页面</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link type="text/css" rel="stylesheet" href="css/index.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4" style="float: right; margin-top: 150px; ">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;&nbsp;用户登录</span>
+						</h3>
+					</div>
+					<div class="panel-body">
+						<form action="#" method="POST" class="form-horizontal" role="form">
+							<p>
+								<label>学号：</label>
+								<input type="text"  id="input" class="form-control" placeholder="请输入学号">
+							</p>
+							<p>
+								<label>姓名：</label>
+								<input type="text" id="name" class="form-control" placeholder="请输入姓名">
+							</p>
+							
+							<p>
+								<label class="checkbox-inline">
+									<input type="checkbox"/>十天内免登录
+								</label>
+							</p>
+							<p>
+								<input type="button"  class="btn btn-success" value="登&nbsp;录"  onclick="userTest()" />
+								<input type="button"  class="btn btn-default" value="注&nbsp;册" data-toggle="modal" data-target="#userRegisterModal"/>
+							</p>
+						</form>
+					</div>
+
+					<div class="modal fade" id="userRegisterModal" role="dialog" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<input type="button" value="&times;" class="close" data-dismiss="modal" aria-hidden="true">
+								</input>
+								<h4 class="modal-title">
+									<span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;&nbsp;用户注册</span>
+								</h4>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="userRegisterText">用户名</div>
+									<div class="userRegisterInput">
+										<input type="text" id="username" class="form-control" name="username" onblur="checkname()">
+										<p class="userRegisterNotice" id="text1" >6-18个字符，可使用字母、数字、下划线</p>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="userRegisterText">密码</div>
+									<div class="userRegisterInput">
+										<input type="password" id="password" class="form-control" name="password" onblur="checkpas()">
+										<p class="userRegisterNotice" id="text2">6-18个字符，可使用字母、数字、下划线</p>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="userRegisterText">确认密码</div>
+									<div class="userRegisterInput">
+										<input type="password" id="password2" class="form-control" onblur="checkpas2()">
+										<p class="userRegisterNotice" id="text3">请再次填写密码</p>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="userRegisterText">性别</div>
+									<div class="userRegisterInput">
+											<input type="radio" name="男" id="input男">男
+											<input type="radio" name="女" id="input男">女
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="userRegisterText">Email</div>
+									<div class="userRegisterInput">
+										<input type="email" id="email" class="form-control" onblur="checkemail()">
+										<p class="userRegisterNotice" id="text4">Email:格式：cjh@qq.com</p>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<input type="submit" class="btn btn-success" value="立即注册" onclick="checkAll()">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	    <!--  <form action="main.html" onsubmit="return userText()"> 
+		     	<label>学号</label>
+		     	<input type="text" placeholder="请输入学号" required="">
+		     	<label>姓名</label>
+		     	<input type="text" placeholder="请输入姓名" name=""> -->
+		     	<!-- </article> -->
+
+</body>
+<script type="text/javascript">
+	function userTest(){
+	var user = document.getElementById("input").value;
+	var pas = document.getElementById("name").value;
+	if(user=='03'&&pas=='陈佳虹'){
+		alert("登录成功！");
+		//return true;
+		window.location.href='./main.html';
+		 //return header("location:main.html");
+
+	}else{
+		
+	  alert("用户名或密码错误");
+	  return false;
+	
+	}
+	
+ 	
+}
+
+	function checkname(){
+	var name = document.getElementById("username").value;
+	var reg = /^[\u4E00-\u9FA5]{3,6}$/;  //用户名是中文3-6位
+	var span1 = document.getElementById("text1");
+	if (!reg.test(name)) {
+		span1.innerHTML="用户名必须中文，并且是3-6位";
+		return false;
+	}else{
+		span1.innerHTML="";
+		return true;
+	}
+
+}
+function checkpas(){
+	var password = document.getElementById("password").value;
+	var reg = /^[a-zA-Z0-9]{4,8}$/;
+	var span2 = document.getElementById("text2");
+	if (!reg.test(password)) {
+		span2.innerHTML="密码必须是4-8位";
+		return false;
+	}else{
+		span2.innerHTML="";
+		return true;
+	}
+
+}
+function checkpas2(){
+	var pas = document.getElementById("password2").value;
+	var password = document.getElementById("password").value;
+	var span3 = document.getElementById("text3");
+	if (pas!=password) {
+		span3.innerHTML="两次密码不一致，请重新输入";
+		return false;
+	}else{
+		span3.innerHTML="";
+		return true;
+	}
+
+}
+function checkemail(){
+	var email = document.getElementById("email").value;
+	var reg = /^[a-zA-Z]+[a-zA-Z0-9]*@([a-zA-Z0-9]+\.)+(com|cn)$/;
+	var span4 = document.getElementById("text4");
+	if (!reg.test(email)) {
+		span4.innerHTML = "email地址必须是字母开始并且***@***.***.com或***@***.***.cn这种格式";
+		return false;
+		
+	}else{
+		span4.innerHTML="";
+		return true;
+
+	}
+
+}
+function checkAll(){
+	if (checkname()&&checkpas()&&checkpas2()&&checkemail()){
+		 // return true;
+	alert("完成注册！");
+	//return true;
+	// header("location:jump.html?code=1&url=main.html&msg=登录成功为您跳转到主页.");
+		
+	}else{
+		alert("注册失败1");
+	//	return false;
+		// alert('用户名或密码错误!请重新登录！');parent.location.href='login.php';
+		// return false;
+		
+	}
+
+}
+
+</script>
+</html>

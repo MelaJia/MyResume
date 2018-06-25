@@ -1,0 +1,139 @@
+body
+ {
+ 	margin:0;
+ 	padding:0;
+ 	border:0;
+ 	list-style: none;
+	font-family:"微软雅黑",Arial, Helvetica, sans-serif;
+	font-size:18px;
+	color:#000000;
+	background: url(../images/bg.jpg) repeat fixed  center;
+	text-align:center;
+}
+.clear{clear:both;
+	height:1px;
+	width:100%; 
+	overflow:hidden; 
+	margin-top:-1px;
+	} 
+
+/* CSS Document */
+li{
+	list-style:none
+} 
+
+.clear{
+	clear:both;
+	height:1px;
+	width:100%;
+	overflow:hidden; 
+	margin-top:-1px
+	} 
+a{
+	color:#000000;
+	text-decoration:none
+	}  
+a:hover{
+	color:#BA2636;
+	} 
+ 
+
+ul#nav{
+	 width:100%; 
+	 height:60px;
+	 background:#D25FD2;
+	 position:fixed;
+	 top:0px;
+	 left:0px;
+	 margin:0 auto
+	 } 
+ul#nav li{
+	display:inline; 
+	height:60px
+	} 
+ul#nav li a{
+	display:inline-block; 
+	padding:0 20px; 
+	height:60px; 
+	line-height:60px; 
+    color:#FFF;  
+	font-size:16px} 
+ul#nav li a:hover{
+	background:purple;
+	} 
+
+#div1{
+		width: 1030px;
+		height:400px;
+		margin: 80px auto;
+		border:solid 18px purple;
+		border-style: outset;
+		border-top-style: none;
+	border-right-style:solid;
+	border-bottom-style: none;
+	border-left-style:solid;
+		 
+	}
+	#div2{
+		width: 1030px;
+		height: 28px;
+		background: silver;
+		
+	}
+	#img1{
+		display: block;
+	}
+	.number{
+		float: left;
+		width: 24px;
+		height: 24px;
+		background: purple;
+		color: white;
+		margin-top: 2px;
+		margin-left: 10px;
+		text-align: center;
+		line-height: 24px;
+	}
+	.over{
+		float: left;
+		width: 150px;
+		height: 24px;
+		background: white;
+		color: black;
+		margin-top: 2px;
+		margin-left: 10px;
+		text-align: center;
+		line-height: 24px;
+	}
+	#div3{
+	position: absolute;
+	left:10px;
+	top:30px;
+}
+#p1{
+	
+	border:solid 1px purple;
+	width:150px;
+	margin:0 auto;
+	height:55px;
+	text-align:center;
+	line-height:55px;
+text-shadow:0 0 5px #FFFF66,1px 1px 1px #fff,-1px -1px 1px #fff,0 0 10px #FFFF99,0 0 20px #B9EB50;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	
+}
+	.tips{
+		color: #2F402B;
+		width: 500px;
+		margin:0 auto;
+		padding: 10px;
+		background: #CCFFBF;
+		border: solid 1px #73BF60;
+		line-height: 20px;
+		display: none;
+	}
+	#p2{
+		line-height:50px;
+	}

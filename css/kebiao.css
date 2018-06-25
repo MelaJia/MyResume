@@ -1,0 +1,31 @@
+body{
+	background: url(../images/bg.jpg) repeat fixed  center;
+	margin:0;
+	padding:0;
+	
+	
+}
+table{
+	width:80%;
+	border:solid 1px red;
+	margin:0 auto;
+}
+.tableh{
+	background:#00a40c;
+	color:#fff;
+	font-weight:bold;
+	
+	}
+.eventS{
+	background-color:#a5e5aa;
+	}
+	.over{
+		background-color: #099;
+		}
+#div2{
+	float:left;
+}
+img{
+		width:100px;
+		height:55px;}
+	
